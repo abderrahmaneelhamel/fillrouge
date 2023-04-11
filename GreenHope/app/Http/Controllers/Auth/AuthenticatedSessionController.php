@@ -42,7 +42,12 @@ class AuthenticatedSessionController extends Controller
         $request->session()->invalidate();
 
         $request->session()->regenerateToken();
+        if(Auth::user()){
+            if(Auth::user()->hasRole('Admin')){
+                return redirect()->intended('/dashboard');
+            }
+        }
 
-        return redirect('/');
+        return redirect('/login');
     }
 }

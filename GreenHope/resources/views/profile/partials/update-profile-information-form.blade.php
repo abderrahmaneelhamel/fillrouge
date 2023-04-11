@@ -1,5 +1,15 @@
 <section>
-    <header>
+    <header class="flex items-center">
+        <div class="mx-4 relative inline-flex items-center justify-center w-20 h-20 overflow-hidden bg-green-200 rounded-full dark:bg-green-600">
+            <span class="cursor-pointer font-medium text-gray-600 dark:text-gray-300">
+                @if ($user->picture)
+                    <img src="{{$user->picture}}" alt="">
+                @else
+                    {{$name}}
+                @endif
+            </span>
+        </div>
+        <div>
         <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
             {{ __('Profile Information') }}
         </h2>
@@ -7,6 +17,7 @@
         <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
             {{ __("Update your account's profile information and email address.") }}
         </p>
+    </div>
     </header>
 
     <form id="send-verification" method="post" action="{{ route('verification.send') }}">

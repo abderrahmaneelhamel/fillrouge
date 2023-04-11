@@ -16,7 +16,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
@@ -24,9 +23,15 @@ class DatabaseSeeder extends Seeder
         // ]);
         $user = User::factory()->create([
             'name' => 'admin',
+            'role' => 'admin',
             'email' => 'admin@gmail.com',
         ]);
             $role = ModelsRole::create(['name' => 'Admin']);
             $user->assignRole($role);
+
+        \App\Models\category::factory(1)->create();
+        \App\Models\donations::factory(1)->create();
+        \App\Models\events::factory(1)->create();
+        \App\Models\needs::factory(1)->create();    
     }
 }

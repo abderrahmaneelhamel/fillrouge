@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
+    <form class="isolate" method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
         @csrf
 
         <!-- Name -->
@@ -38,7 +38,17 @@
 
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
-
+        <div class="mt-4">
+            <x-input-label for="picture" :value="__('profile picture')" />
+            <x-text-input id="picture" name="file" type="file" class="mt-1 block w-full" required />
+            <x-input-error class="mt-2" :messages="$errors->get('picture')" />
+        </div>
+        <div class="my-4">
+        <x-input-label for="role" :value="__('register as :')" />
+        <input type="Radio" name="role" value="organisation"> organisation
+        <input type="Radio" name="role" value="donor"> donor
+        <input type="Radio" name="role" value="in need"> in need
+        </div>
         <div class="flex items-center justify-end mt-4">
             <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
                 {{ __('Already registered?') }}

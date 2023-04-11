@@ -1,3 +1,494 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+a:hover {
+  color: #0e7b31;
+  text-decoration: none;
+}
+
+.button {
+    font-family: inherit;
+    font-size: 18px;
+    background: linear-gradient(to bottom, #4dd9d2 0%,#14b251 100%);
+    color: white;
+    padding: 0.8em 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+  }
+  
+  .button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .button span {
+    display: block;
+    margin-left: 0.4em;
+    transition: all 0.3s;
+  }
+  
+  .button svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+    transition: all 0.3s;
+  }
+  
+  .button .svg-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 0.5em;
+    transition: all 0.3s;
+  }
+  
+  .button:hover .svg-wrapper {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .button:hover svg {
+    transform: rotate(45deg);
+  }
+  
+  .button1 {
+    --color: #00a95d;
+    width: 90px;
+    height: 40px;
+    padding: 0em 0.8em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+   }
+   
+   .button1::before, .button1::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+   }
+   
+   .button1::before {
+    top: -1em;
+    left: -1em;
+   }
+   
+   .button1::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+   }
+   
+   .button1:hover::before, .button1:hover::after {
+    height: 210px;
+    width: 210px;
+   }
+   
+   .button1:hover {
+    color: rgb(255, 255, 255);
+   }
+   
+   .button1:active {
+    filter: brightness(.8);
+   }
+   
+   .button2 {
+    padding: 17px 40px;
+    border-radius: 50px;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.765);
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    color: #158e43;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .5s ease;
+   }
+   
+   .button2:hover {
+    letter-spacing: 3px;
+    background-color: hsl(137, 70%, 34%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(29, 189, 77) 0px 7px 29px 0px;
+   }
+   
+   .button2:active {
+    letter-spacing: 3px;
+    background-color: hsl(137, 70%, 34%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(29, 189, 77) 0px 7px 29px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+   }
+
+   .cssbuttons-io-button {
+    background: #0e7b31;
+    color: white;
+    width: 180px;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #0e7b31;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+  }
+  
+  .cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #0e7b31;
+    right: 0.3em;
+    transition: all 0.3s;
+  }
+  
+  .cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+  }
+  
+  .cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #0e7b31;
+  }
+  
+  .cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+  }
+  
+  .cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+  }
+  
+
+   #bottone1 {
+    width: 100%;
+    height: 40px;
+    padding-left: 33px;
+    padding-right: 33px;
+    padding-bottom: 16px;
+    padding-top: 8px;
+    border-radius: 9px;
+    background: #2aa850;
+    color: white;
+    border: none;
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+   }
+   
+   #bottone1:hover {
+    box-shadow: 10px 8px 60px -10px #2aa850;
+   }
+   
+   #bottone1:active {
+    transform: scale(1.4);
+    box-shadow: 7px 5px 56px -10px #0bc772;
+   }
+
+   .bt {
+    border: none;
+    user-select: none;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    background-color: #21a465;
+    box-shadow: #cacaca 2px 2px 10px 1px;
+    border-radius: 12px;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    transition: all 0.2s ease;
+    position: relative;
+  }
+  
+  .msg {
+    height: 0;
+    width: 0;
+    border-radius: 2px;
+    position: absolute;
+    left: 15%;
+    top: 25%;
+  }
+  
+  .bt:active {
+    transition: all 0.001s ease;
+    background-color: #21a465;
+    box-shadow: #97989a 0 0 0 0;
+    transform: translateX(1px) translateY(1px);
+  }
+  
+  .bt:hover .msg {
+    animation: msgRun 2s forwards;
+  }
+  
+  @keyframes msgRun {
+    0% {
+      border-top: #d6d6d9 0 solid;
+      border-bottom: #f2f2f5 0 solid;
+      border-left: #f2f2f5 0 solid;
+      border-right: #f2f2f5 0 solid;
+    }
+  
+    20% {
+      border-top: #d6d6d9 14px solid;
+      border-bottom: #f2f2f5 14px solid;
+      border-left: #f2f2f5 20px solid;
+      border-right: #f2f2f5 20px solid;
+    }
+  
+    25% {
+      border-top: #d6d6d9 12px solid;
+      border-bottom: #f2f2f5 12px solid;
+      border-left: #f2f2f5 18px solid;
+      border-right: #f2f2f5 18px solid;
+    }
+  
+    80% {
+      border-top: transparent 12px solid;
+      border-bottom: transparent 12px solid;
+      border-left: transparent 18px solid;
+      border-right: transparent 18px solid;
+    }
+  
+    100% {
+      transform: translateX(150px);
+      border-top: transparent 12px solid;
+      border-bottom: transparent 12px solid;
+      border-left: transparent 18px solid;
+      border-right: transparent 18px solid;
+    }
+  }
+
+  .button4 {
+    --color: #21a45a;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+   }
+   
+   .button4:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+   }
+   
+   .button4:hover {
+    color: #fff;
+   }
+   
+   .button4:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+   }
+   
+   .button4:hover:before {
+    top: -30px;
+    left: -30px;
+   }
+   
+   .button4:active:before {
+    background: #21a45a;
+    transition: background 0s;
+   }
+
+   .buttonD {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    background: #e62222;
+   }
+   
+   .buttonD, .buttonD span {
+    transition: 200ms;
+   }
+   
+   .buttonD .text {
+    transform: translateX(35px);
+    color: white;
+    font-weight: semibold;
+   }
+   
+   .buttonD .icon {
+    position: absolute;
+    border-left: 1px solid #c41b1b;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   
+   .buttonD svg {
+    width: 15px;
+    fill: #eee;
+   }
+   
+   .buttonD:hover {
+    background: #ff3636;
+   }
+   
+   .buttonD:hover .text {
+    color: transparent;
+   }
+   
+   .buttonD:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+   }
+   
+   .buttonD:focus {
+    outline: none;
+   }
+   
+   .buttonD:active .icon svg {
+    transform: scale(0.8);
+   }
+
+   .buttonA {
+    width: 9em;
+    height: 3em;
+    border-radius: 30em;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #c5c5c5,
+                -6px -6px 12px #ffffff;
+   }
+   .buttonA:focus{
+    border: none !important;
+    outline: none;
+   }   
+   .buttonA::before {
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #0fd850 0%, #60e999 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+   
+   .buttonA:hover::before {
+    width: 9em;
+   }
+
+   .button5 {
+    appearance: none;
+    background-color: transparent;
+    border: 0.125em solid #1A1A1A;
+    border-radius: 0.9375em;
+    box-sizing: border-box;
+    color: #3B3B3B;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    height: 2.5em;
+    min-width: 0;
+    outline: none;
+    padding: 0em 2.3em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+   }
+   
+   .button5:disabled {
+    pointer-events: none;
+   }
+   
+   .button5:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+   }
+   
+   .button5:active {
+    box-shadow: none;
+    transform: translateY(0);
+   }

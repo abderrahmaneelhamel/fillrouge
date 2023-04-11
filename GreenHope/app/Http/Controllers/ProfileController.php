@@ -16,8 +16,19 @@ class ProfileController extends Controller
      */
     public function edit(Request $request): View
     {
+        function makeInitialsFromSingleWord(string $name) : string
+        {
+            preg_match_all('#([A-Z]+)#', $name, $capitals);
+            if (count($capitals[1]) >= 2) {
+                return mb_substr(implode('', $capitals[1]), 0, 2, 'UTF-8');
+            }
+            return mb_strtoupper(mb_substr($name, 0, 2, 'UTF-8'), 'UTF-8');
+        }
+        $name = Auth::user()->name;
+        $ini = makeInitialsFromSingleWord($name);
         return view('profile.edit', [
             'user' => $request->user(),
+            'name' => $ini
         ]);
     }
 
