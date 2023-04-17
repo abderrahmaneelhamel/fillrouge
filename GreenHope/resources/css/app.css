@@ -6,6 +6,18 @@ a:hover {
   color: #0e7b31;
   text-decoration: none;
 }
+button:focus{
+  outline: none;
+}
+
+.eventcard{
+  width: 47%
+ }
+@media (max-width: 500px) {
+  .eventcard{
+    width: 87%
+  }
+}
 
 .button {
     font-family: inherit;

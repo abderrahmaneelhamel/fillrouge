@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\events;
+use App\Models\money_donations;
 use App\Models\User;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -97,9 +98,13 @@ class EventsController extends Controller
             "amount" => 'required',
         ]);
         $event = events::where('id' , $request->id)->get();
-        $add = $event[0]->raised + $request->amount;
         events::where('id' , $request->id)->update([
-            "raised" => $add,
+            "raised" => ($event[0]->raised + $request->amount),
+        ]);
+        money_donations::create([
+            "amount" => $request->amount,
+            "donor" => Auth::user()->id,
+            "To" => $event[0]->organisation,
         ]);
         return Redirect::to('/events');
     }

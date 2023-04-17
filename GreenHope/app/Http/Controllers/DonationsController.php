@@ -19,12 +19,23 @@ class DonationsController extends Controller
      */
     public function index()
     {
-        
         return view('donations.view', [
-            'donations' => donations::paginate(9),
-            'categories' => category::all(),
-            'users' => User::all()
+                    'donations' => donations::paginate(9),
+                    'categories' => category::all(),
+                    'users' => User::all()
         ]);
+        
+    }
+
+    public function Mydonation()
+    {
+        if(Auth::user()->hasRole('Inneed')){
+            return view('donations.Mydonation', [
+                    'donations' => donations::paginate(9),
+            ]);
+        }else{
+            return redirect()->back();
+        }
     }
 
     /**
@@ -62,6 +73,7 @@ class DonationsController extends Controller
             "To" => $need[0]->inneed_user->id,
         ]);
         needs::where('id' , $request->id)->delete();
+        NotificationController::sendDonationNotification($need[0]->inneed_user->id,$request->description);
         return redirect()->back();
     }
 
@@ -70,9 +82,11 @@ class DonationsController extends Controller
             "id" => 'required',
         ]);
         $user = Auth::user()->id;
+        $donation = donations::where('id' , $request->id)->get();
         donations::where('id' , $request->id)->update([
             "To" => $user,
         ]);
+        NotificationController::sendAddingNotification($donation[0]->Donor_user->id);
         return redirect()->back();
     }
 

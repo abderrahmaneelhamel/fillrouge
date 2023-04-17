@@ -10,9 +10,9 @@ class cloudinary extends Controller
 {
     public static function getsignature(){
         $cloudinaryConfig = new CloudConfig([
-            "cloud_name" => "dhti1bezp",
-            "api_key" => "882123237232126",
-            "api_secret" => "MU9exy0Lt03saG_DbAFhRW9BgEs"
+            "cloud_name" => 'dhti1bezp',
+            "api_key" => '882123237232126',
+            "api_secret" => 'MU9exy0Lt03saG_DbAFhRW9BgEs'
         ]);
         $timestamp=time();
         $params =
@@ -25,9 +25,9 @@ class cloudinary extends Controller
     }
     public static function getDonationsSignature(){
         $cloudinaryConfig = new CloudConfig([
-            "cloud_name" => "dhti1bezp",
-            "api_key" => "882123237232126",
-            "api_secret" => "MU9exy0Lt03saG_DbAFhRW9BgEs"
+            "cloud_name" => 'dhti1bezp',
+            "api_key" => '882123237232126',
+            "api_secret" => 'MU9exy0Lt03saG_DbAFhRW9BgEs'
         ]);
         $timestamp=time();
         $params =
@@ -40,9 +40,9 @@ class cloudinary extends Controller
     }
     public static function geteventsSignature(){
         $cloudinaryConfig = new CloudConfig([
-            "cloud_name" => "dhti1bezp",
-            "api_key" => "882123237232126",
-            "api_secret" => "MU9exy0Lt03saG_DbAFhRW9BgEs"
+            "cloud_name" => 'dhti1bezp',
+            "api_key" => '882123237232126',
+            "api_secret" => 'MU9exy0Lt03saG_DbAFhRW9BgEs'
         ]);
         $timestamp=time();
         $params =

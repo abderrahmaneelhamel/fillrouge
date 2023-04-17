@@ -215,7 +215,27 @@
               </footer>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
-
+        <script>
+            function animation() {
+              return {
+                counter: 0,
+                animate(finalCount) {
+                  let time = 1500 /* Time in milliseconds */
+                  let interval = 2
+                  let step = Math.floor(finalCount*interval/time)
+                  let timer = setInterval(() => {
+                    this.counter = this.counter + step;
+                    if (this.counter >= finalCount + step) {
+                      this.counter = finalCount
+                      clearInterval(timer);
+                      timer = null;
+                      return;
+                    }
+                  }, interval);
+                }
+              };
+            }
+          </script>
         @livewire('notifications')
     </body>
 </html>

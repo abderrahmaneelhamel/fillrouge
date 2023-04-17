@@ -30,6 +30,7 @@
           </div>
       </div>
     </div>
+    <div class="overflow-x-scroll">
     <table class="w-full rounded-lg text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs rounded-lg text-gray-700 uppercase bg-green-100 dark:bg-green-700 dark:text-green-400">
             <tr>
@@ -122,6 +123,7 @@
         </tbody>
     </table>
 </div>
+</div>
 <div style="width: 99%" class="ml-2 my-5 relative overflow-x-hidden shadow-md sm:rounded-lg">
     <p class="ml-3 max-w-2xl mb-6 font-bold text-black lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Categories</p>
     <!-- drawer init and show -->
@@ -145,6 +147,7 @@
           </div>
       </div>
     </div>
+    <div class="overflow-x-scroll">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-green-100 dark:bg-green-700 dark:text-green-400">
             <tr>
@@ -192,6 +195,7 @@
         </tbody>
     </table>
 </div>
+</div>
 <div style="width: 99%" class="ml-2 my-5 relative overflow-x-hidden shadow-md sm:rounded-lg">
     <p class="ml-3 max-w-2xl mb-6 font-bold text-black lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">needs</p>
     <!-- drawer init and show -->
@@ -215,6 +219,7 @@
           </div>
       </div>
     </div>
+    <div class="overflow-x-scroll">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-green-100 dark:bg-green-700 dark:text-green-400">
             <tr>
@@ -278,6 +283,7 @@
         </tbody>
     </table>
 </div>
+</div>
 <div style="width: 99%" class="ml-2 my-5 relative overflow-x-hidden shadow-md sm:rounded-lg">
     <p class="ml-3 max-w-2xl mb-6 font-bold text-black lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">events</p>
     <!-- drawer init and show -->
@@ -302,6 +308,7 @@
           </div>
       </div>
     </div>
+    <div class="overflow-x-scroll">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-green-100 dark:bg-green-700 dark:text-green-400">
             <tr>
@@ -407,8 +414,10 @@
         </tbody>
     </table>
 </div>
+</div>
 <div style="width: 99%" class="ml-2 my-5 relative overflow-x-hidden shadow-md sm:rounded-lg">
     <p class="ml-3 max-w-2xl mb-6 font-bold text-black lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Money Donations</p>
+    <div class="overflow-x-scroll">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-green-100 dark:bg-green-700 dark:text-green-400">
             <tr>
@@ -465,6 +474,7 @@
             @endif
         </tbody>
     </table>
+</div>
 </div>
 </div>
 </div>

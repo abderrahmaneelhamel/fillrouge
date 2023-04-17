@@ -15,6 +15,25 @@
         </div>                
     </div>
   </div>
+  <div class="bg-gray-50 min-h-screen">
+    <div class="relative w-full">
+      <div class="absolute top-0 -left-4 w-72 h-72 bg-green-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob "></div>
+      <div class="absolute top-0 -right-4 w-72 h-72 bg-green-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+      <div class="absolute -bottom-32 left-20 w-72 h-72 bg-green-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+      <div class="w-full relative">
+  <div class="">
+    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+        <div class="mr-auto place-self-center lg:col-span-7">
+            <p class="max-w-2xl mb-6 italic text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-600">Welcome to Green Hope, the online donation platform that supports various charitable causes around the world. Our website provides an easy and secure way for you to make a positive impact by donating to organizations that are making a difference in their respective fields. We work with trusted partners to ensure that your contributions are used effectively and efficiently, and we provide regular updates on the progress and impact of our partner organizations. With Green Hope, you can support a wide range of causes, from education and healthcare to poverty reduction and disaster relief. We believe that even the smallest donation can make a difference, and we strive to create a community of passionate and compassionate individuals who share our vision of a better world. Join us today and make a difference in the lives of those in need.</p>
+        </div>
+        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+            <img style="width: 413px; height: 310px;" src="./build/assets/Logo-Green-Hope.png" alt="mockup">
+        </div>                
+    </div>
+  </div>
+</div>
+</div>
+</div>
   <div class="flex items-end justify-end fixed bottom-0 right-2 mb-4 mr-4 z-10">
     <div>
         <a title="Contact Us" href="/contact" class="block w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12">

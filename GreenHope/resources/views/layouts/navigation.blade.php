@@ -13,7 +13,7 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     @if (Auth::user()->hasRole('Admin'))
-                         <x-nav-link href="/admin/dashboard" :active="request()->routeIs('dashboard')">
+                         <x-nav-link href="/dashboard" :active="request()->routeIs('dashboard')">
                             {{ __('Dashboard') }}
                         </x-nav-link>
                         <x-nav-link href="/admin">
@@ -35,6 +35,11 @@
                     <x-nav-link href="/needs" :active="request()->routeIs('needs.index')">
                         {{ __('Needs') }}
                     </x-nav-link>
+                    @if (Auth::user()->hasRole('Inneed'))
+                         <x-nav-link href="/Mydonation" :active="request()->routeIs('Mydonation')">
+                            {{ __('My Donations') }}
+                        </x-nav-link>
+                    @endif
                     @if(request()->routeIs('profile.edit'))
                         <x-nav-link href="/profile" :active="request()->routeIs('profile.edit')">
                             {{ __('profile') }}
@@ -99,6 +104,41 @@
             <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
                 {{ __('home') }}
             </x-responsive-nav-link>
+            @if (Auth::user()->hasRole('Admin'))
+                         <x-responsive-nav-link href="/dashboard" :active="request()->routeIs('dashboard')">
+                            {{ __('Dashboard') }}
+                        </x-responsive-nav-link>
+                        <x-responsive-nav-link href="/admin">
+                            {{ __('Admin Dashboard') }}
+                        </x-responsive-nav-link>
+                    @endif
+                    <x-responsive-nav-link href="/about" :active="request()->routeIs('about')">
+                        {{ __('About') }}
+                    </x-responsive-nav-link>
+                    <x-responsive-nav-link href="/events" :active="request()->routeIs('events.index')">
+                        {{ __('Events') }}
+                    </x-responsive-nav-link>
+                    <x-responsive-nav-link href="/donations" :active="request()->routeIs('donations.index')">
+                        {{ __('Donations') }}
+                    </x-responsive-nav-link>
+                    <x-responsive-nav-link href="/needs" :active="request()->routeIs('needs.index')">
+                        {{ __('Needs') }}
+                    </x-responsive-nav-link>
+                    @if (Auth::user()->hasRole('Inneed'))
+                            <x-responsive-nav-link href="/Mydonation" :active="request()->routeIs('Mydonation')">
+                            {{ __('My Donations') }}
+                        </x-responsive-nav-link>
+                    @endif
+                    @if(request()->routeIs('profile.edit'))
+                        <x-responsive-nav-link href="/profile" :active="request()->routeIs('profile.edit')">
+                            {{ __('profile') }}
+                        </x-responsive-nav-link>
+                    @endif
+                    @if(request()->routeIs('contact'))
+                        <x-responsive-nav-link href="/contact" :active="request()->routeIs('contact')">
+                            {{ __('Contact Us') }}
+                        </x-responsive-nav-link>
+                    @endif
         </div>
 
         <!-- Responsive Settings Options -->

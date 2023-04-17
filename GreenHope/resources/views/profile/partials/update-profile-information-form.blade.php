@@ -58,6 +58,18 @@
             @endif
         </div>
 
+        <div>
+            @if ((Auth::user()->hasRole('Organisation')) || (Auth::user()->hasRole('Inneed')) || (Auth::user()->hasRole('Donor')) || (Auth::user()->hasRole('Admin')))
+                <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
+                    Role : <span class="text-green-600">{{ $user->role }}</span>
+                </h2>
+            @else
+            <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
+                Role : <span class="text-gray-400">Still in process...⌛</span>
+            </h2>
+            @endif
+        </div>
+
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __('Save') }}</x-primary-button>
 
